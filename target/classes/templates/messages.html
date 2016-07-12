@@ -11,14 +11,13 @@
     </form>
 
     {{#user}}
-        <h2>Messages by {{user.name}}:</h2>
-    {{/user}}
+        <h2>Messages by {{name}}:</h2>
 
         <ol>
-        {{#user.message}}
-            <li class="message">{{.}}</li>
-        {{/user.message}}
+        {{#messageList}}
+            <li class="message">{{message}}</li>
+        {{/messageList}}
         </ol>
-
+    {{/user}}
 </body>
 </html>

@@ -27,11 +27,11 @@ public class Main {
         }), new MustacheTemplateEngine());
 
         Spark.post("/create-user", ((request, response) -> {
-                    String name = request.queryParams("userName");
-                    user = new User(name);
-                    response.redirect("/");
-                    return "";
-                })
+            String name = request.queryParams("userName");
+            user = new User(name);
+            response.redirect("/");
+            return "";
+            })
         );
 
         Spark.post("/create-message", ((request, response) -> {
@@ -39,7 +39,7 @@ public class Main {
             user.addMessage(input);
             response.redirect("/");
             return "";
-        })
+            })
         );
 
     }

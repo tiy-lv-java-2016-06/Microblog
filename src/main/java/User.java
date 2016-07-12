@@ -6,17 +6,26 @@ import java.util.List;
  */
 public class User {
     private String name;
-    private List message = new ArrayList<String>();
+    private List<Message> messageList = new ArrayList<>();
 
     public User(String name) {
         this.name = name;
     }
 
-    public List getMessage() {
-        return message;
+    public String getName() {
+        return name;
     }
 
-    public void addMessage(String message) {
-        this.message.add(message);
+    public List getMessageList() {
+        return messageList;
+    }
+
+    public void addMessage(Message message) {
+        this.messageList.add(message);
+    }
+
+    public void addMessage (String message){
+        Message input = new Message(message);
+        this.messageList.add(input);
     }
 }
